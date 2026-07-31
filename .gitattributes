@@ -1,0 +1,13 @@
+# Normaliza los finales de línea: en el repositorio siempre se guardan como LF,
+# sin importar el sistema operativo desde el que se haga commit.
+* text=auto eol=lf
+
+# Binarios: que Git no intente tocarlos.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.ico binary
+*.woff binary
+*.woff2 binary

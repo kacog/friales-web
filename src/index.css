@@ -1,0 +1,70 @@
+@import 'tailwindcss';
+
+/*
+  Tokens de marca FriAles.
+  Paleta oficial: negro, violeta #7064D8, blanco.
+  Colores de apoyo por cerveza (verde selvático, ámbar, dorado miel).
+*/
+@theme {
+  --color-paper: #fbfaf6;
+  --color-paper-dim: #f2efe7;
+  --color-ink: #141317;
+  --color-ink-soft: #4a4750;
+  --color-noche: #0b0b0d;
+  --color-noche-2: #141317;
+  --color-hueso: #f4f1ea;
+  --color-hueso-dim: #cfccc4;
+
+  --color-violeta: #7064d8;
+  --color-violeta-deep: #564aad;
+  --color-violeta-light: #8a80e6;
+  --color-violeta-pale: #b7aef5;
+
+  --color-mancai: #6f8f6a;
+  --color-jaguaryu: #c98a3a;
+  --color-mayaguaca: #c4972f;
+
+  --color-rule: #dcd8cd;
+  --color-rule-dark: #2a2930;
+
+  /* Serif editorial de alto contraste para títulos; serif cálida para texto. */
+  --font-display: Cambria, 'Iowan Old Style', 'Palatino Linotype', Georgia, serif;
+  --font-body: Constantia, 'Iowan Old Style', Athelas, Georgia, serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    margin: 0;
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-body);
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    line-height: 1.08;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-violeta);
+    outline-offset: 3px;
+  }
+}
